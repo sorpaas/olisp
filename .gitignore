@@ -9,3 +9,5 @@
 *.cmxa
 
 lexer.ml
+parser.ml
+parser.mli

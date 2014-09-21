@@ -2,7 +2,8 @@
 %token LBRACKET
 %token RBRACKET
 %token EOF
-%start <Types.sexp> main
+%start main
+%type <Types.sexp> main
 %%
 
 main:
@@ -17,7 +18,7 @@ sexp:
 
 list:
   LBRACKET RBRACKET { Types.Atom "nil" }
-  LBRACKET inside_list RBRACKET { $2 }
+| LBRACKET inside_list RBRACKET { $2 }
 ;
 
 inside_list:
