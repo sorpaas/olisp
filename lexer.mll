@@ -9,4 +9,4 @@ rule token = parse
 | ')'                          { RBRACKET }
 | ';' [^ '\n']*                { token lexbuf }
 | ['A'-'z'] ['A'-'z' '0'-'9']* { NAME(Lexing.lexeme lexbuf) }
-| eof                          { raise eof }
+| eof                          { raise Eof }
