@@ -6,7 +6,7 @@ OCAMLFLAGS=$(INCLUDES) -g
 OCAMLOPTFLAGS=$(INCLUDES)
 
 # The list of object files for prog1
-MAIN_OBJS=types.cmo parser.cmo lexer.cmo main.cmo
+MAIN_OBJS=types.cmo parser.cmo lexer.cmo lisp.cmo main.cmo
 
 oclisp: .depend $(MAIN_OBJS)
 	$(OCAMLC) -o olisp $(OCAMLFLAGS) $(MAIN_OBJS)
